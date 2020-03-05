@@ -1,0 +1,28 @@
+<div>
+    <h2>{{title}}</h2>
+    
+        <table v-if="active">
+                <tr class="row" >
+                    <td @click="addToBox('a'), isClicked = !isClicked" :class="{transition: isClicked}" >{{ a }}</td>
+                    <td @click="addToBox('b')" >{{ b }}</td>
+                    <td @click="addToBox('c')" >{{ c }}</td>
+                    
+                </tr>
+                <tr class="row">
+                    <td @click="addToBox('d')" > {{ d }}</td>
+                    <td @click="addToBox('e')" > {{ e }}</td>
+                    <td @click="addToBox('f')" > {{ f }}</td>
+                    
+                    
+                </tr>
+                <tr class="row">
+                    <td @click="addToBox('g')" > {{ g }}</td>
+                    <td @click="addToBox('h')" > {{ h }}</td>
+                    <td @click="addToBox('i')" > {{ i }}</td>
+                    
+                </tr>
+            </table>
+   
+            
+    <h2 v-if="active"> Current team turn :  {{ player }}</h2>
+</div>
